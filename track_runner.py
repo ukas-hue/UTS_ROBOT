@@ -1,22 +1,4 @@
 
-"""
-track_runner.py — rekam lintasan robot dari /odom dan ulangi otomatis.
-
-Mode:
-  record : merekam lintasan ketika robot dikendalikan oleh pengendali manual lain.
-  coords : mengikuti lintasan yang tersimpan di file JSON menggunakan /odom dan /cmd_vel.
-
-Default topic:
-  /odom     nav_msgs/msg/Odometry
-  /cmd_vel  geometry_msgs/msg/Twist
-
-Catatan:
-- Jalankan mode record dan kendalikan robot dengan WASD di terminal lain.
-- Jangan jalankan dua pengendali gerak manual secara bersamaan.
-- Untuk replay, letakkan robot di posisi dan arah awal lintasan yang sama.
-- Odometri roda dapat mengalami drift; amati Gazebo dan siap hentikan dengan Ctrl+C.
-"""
-
 import argparse
 import json
 import math
